@@ -1,9 +1,5 @@
 /* Main */
 
-body, a { color:#4E5368; }
-
-a:visited { color:#4E5368; }
-
 pre, code, tt {
 	font-family:monospace;
 }
@@ -16,14 +12,6 @@ a.wikilink2, a.wikilink2:visited {
 
 .h6e-entry-title a { text-decoration:none; }
 .h6e-entry-title a:hover { text-decoration:underline; }
-
-.h6e-main-content, .h6e-extra-content {
-	padding-top:0;
-}
-
-.content-page, .do-page {
-	padding-top:0;
-}
 
 /* make the entry-content bigger */
 .h6e-post-content {
@@ -39,6 +27,9 @@ a.wikilink2, a.wikilink2:visited {
 	text-align:right;
 	font-size:1.2em;
 	padding:0.5em 1em;
+	position:absolute;
+	top:0;
+	right:0;
 }
 
 .user-info a {
@@ -62,12 +53,8 @@ thead th {
 	background-color:transparent;	
 }
 
-.do-page .h6e-entry-title,
-.do-page .breadcrumbs,
-.do-page .pageinfo,
-.do-page .actions-page {
-	display:none;
-}
+.do-page .h6e-entry-title, .do-page .breadcrumbs,
+.do-page .pageinfo, .do-page .actions-page { display:none; }
 
 legend { display:none; }
 
@@ -77,9 +64,7 @@ div.info, div.error, div.success, div.notify {
 	font-size:1.1em;
 }
 
-div.notify {
-	border-color:#FFD324;
-}
+div.notify { border-color:#FFD324; }
 
 /* DokuWiki */
 

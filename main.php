@@ -27,7 +27,7 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
 
   <link rel="stylesheet" media="screen" href="<?php echo H6E_CSS ?>/h6e-minimal/h6e-minimal.css" />
 
-  <?php tpl_metaheaders()?>
+  <?php tpl_metaheaders() ?>
   
   <style type="text/css">
   .h6e-main-content {
@@ -49,15 +49,19 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
 
 <div class="dokuwiki">
 
-  <?php html_msgarea()?>
+  <?php html_msgarea() ?>
 
-  <div class="user-info">
-    <?php tpl_userinfo()?>
-    <?php tpl_actionlink('subscription') ?>
-    <?php tpl_actionlink('profile') ?>
-    <?php tpl_actionlink('admin') ?>
-    <?php tpl_actionlink('login'); ?>
-  </div>
+  <?php if (function_exists('ld_top_bar')) : ?>
+     <?php ld_top_bar() ?>
+  <?php else : ?>
+    <div class="user-info">
+        <?php tpl_userinfo()?>
+        <?php tpl_actionlink('subscription') ?>
+        <?php tpl_actionlink('profile') ?>
+        <?php tpl_actionlink('admin') ?>
+        <?php tpl_actionlink('login'); ?>
+    </div>
+  <?php endif ?>
 
   <div class="<?php echo $page_type ?> h6e-main-content">
 
