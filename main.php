@@ -51,7 +51,17 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
 
   <?php html_msgarea() ?>
 
-  <?php if (function_exists('ld_top_bar')) : ?>
+  <?php
+  if (tpl_getConf('topbar') == 'never') {
+      $top_bar = false;
+  } else if (tpl_getConf('topbar') == 'connected' && empty($_SERVER['REMOTE_USER'])) {
+      $top_bar = false;
+  } else {
+      $top_bar = true;
+  }
+  ?>
+
+  <?php if (function_exists('ld_top_bar') && $top_bar) : ?>
      <?php ld_top_bar() ?>
   <?php else : ?>
     <div class="user-info">

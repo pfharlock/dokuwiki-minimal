@@ -37,23 +37,23 @@ if (!defined('H6E_CSS')) {
 <body>
 <div id="media__manager" class="dokuwiki h6e-main-content">
 
-    
-    
     <div id="media__left">
-        
+
         <?php html_msgarea()?>
-        
+
         <h2 class="h6e-entry-title"><?php echo hsc($lang['mediaselect'])?></h2>
 
         <?php /* keep the id! additional elements are inserted via JS here */?>
         <div id="media__opts"></div>
 
         <?php tpl_mediaTree() ?>
+
     </div>
 
     <div id="media__right">
         <?php tpl_mediaContent() ?>
     </div>
+
 </div>
 </body>
 </html>
