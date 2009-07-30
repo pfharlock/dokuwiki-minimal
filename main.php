@@ -61,8 +61,8 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
   }
   ?>
 
-  <?php if (function_exists('ld_top_bar') && $top_bar) : ?>
-     <?php ld_top_bar() ?>
+  <?php if (class_exists('Ld_Ui') && method_exists('Ld_Ui', 'top_bar') && $top_bar) : ?>
+     <?php Ld_Ui::top_bar() ?>
   <?php else : ?>
     <div class="user-info">
         <?php tpl_userinfo()?>
