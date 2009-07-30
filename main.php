@@ -30,11 +30,13 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
   <?php tpl_metaheaders() ?>
   
   <style type="text/css">
+  <?php if (tpl_getConf('width') != 'auto') : ?>
   .h6e-main-content {
       width:<?php echo tpl_getConf('width') ?>;
       padding-left:2.5em;
       padding-right:2.5em;
   }
+  <?php endif ?>
   .h6e-post-content {
       font-size:<?php echo tpl_getConf('font-size') ?>;
   }
