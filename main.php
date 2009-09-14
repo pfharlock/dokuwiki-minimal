@@ -70,8 +70,8 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
       </div>
   <?php endif ?>
 
-  <div style="padding-top: 10px; padding-left: 30px;">
-  <h3><a href="/">The Singularity</a> &gt; <?php tpl_link(wl(),$conf['title'],'name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[ALT+H]"') ?> &gt; <?php tpl_actionlink('backlink')?> </h3>
+  <div style="padding-left: 30px;">
+  <h4><a href="/">The Singularity</a> &gt; <?php tpl_link(wl(),$conf['title'],'name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[ALT+H]"') ?> &gt; <?php tpl_actionlink('backlink')?> </h4>
   </div>
 
   <div class="<?php echo $page_type ?> h6e-main-content">

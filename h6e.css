@@ -28,8 +28,6 @@ a.wikilink2, a.wikilink2:visited {
 
 /* make the entry-content bigger */
 .h6e-post-content {
-	font-size:1.1em;
-	line-height:1.2em;
 }
 
 .h6e-page-title {
@@ -38,8 +36,7 @@ a.wikilink2, a.wikilink2:visited {
 
 .user-info {
 	text-align:right;
-	font-size:1.2em;
-	padding:0.5em 1em;
+	padding: 0 1em;
 }
 
 .user-info a {
