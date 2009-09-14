@@ -2,13 +2,7 @@
 
 if (!defined('DOKU_INC')) die();
 
-if (!defined('H6E_CSS')) {
-  if (file_exists(dirname(__FILE__) . '/h6e-minimal')) {
-    define('H6E_CSS', DOKU_URL . 'lib/tpl/minimal');
-  } else {
-    define('H6E_CSS', 'http://h6e.net/css');
-  }
-}
+define('H6E_CSS', DOKU_URL . 'lib/tpl/minimal');
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
