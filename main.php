@@ -88,6 +88,7 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
     <div class="actions actions-page">
         <?php tpl_button('edit')?>
         <?php tpl_button('history')?>
+        <?php tpl_button('revert')?>
         <?php tpl_button('backlink')?>
     </div>
 
