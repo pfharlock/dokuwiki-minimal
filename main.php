@@ -49,7 +49,7 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
 
 <body>
 
-<div class="dokuwiki">
+<div class="dokuwiki h6e-layout">
 
   <?php include dirname(__FILE__) . '/top.php' ?>
 

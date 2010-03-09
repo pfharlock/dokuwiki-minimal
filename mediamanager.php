@@ -34,7 +34,7 @@ if (!defined('H6E_CSS')) {
   </style>
 </head>
 
-<body>
+<body class="h6e-layout">
 <div id="media__manager" class="dokuwiki h6e-main-content">
 
     <div id="media__left">
