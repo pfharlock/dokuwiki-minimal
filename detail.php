@@ -39,9 +39,9 @@ if (!defined('H6E_CSS')) {
 
 </head>
 
-<body>
+<body class="h6e-layout">
 
-<div class="dokuwiki h6e-layout">
+<div class="dokuwiki">
 
   <?php include dirname(__FILE__) . '/top.php' ?>
 
