@@ -212,4 +212,6 @@ div.dokuwiki h3 {margin-left: 40px;}
 div.dokuwiki h4 {margin-left: 60px;}
 div.dokuwiki h5 {margin-left: 80px;}
              
-
+table {border: thin solid; border-collapse: collapse}
+table td {border: thin solid}
+table th {border: thin solid}
