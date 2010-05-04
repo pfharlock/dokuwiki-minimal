@@ -1,6 +1,7 @@
 /* Main */
 
-body, a { color:#4E5368; background: #fff url(watermark.jpg) no-repeat top right;}
+/*body, a { color:#4E5368; background: #fff url(watermark.jpg) no-repeat top right;}*/
+body, a { color:#4E5368; background-color: transparent;}
 
 
 a:visited { color:#4E5368; }

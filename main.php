@@ -47,7 +47,7 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
   <?php include dirname(__FILE__) . '/top.php' ?>
 
   <div style="padding-bottom: .5em; padding-left: 30px;">
-  <b><a href="/">The Singularity</a> &gt; <?php tpl_link(wl(),$conf['title'],'name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[ALT+H]"') ?> &gt; <?php tpl_actionlink('backlink')?> </b>
+  <b><?php tpl_link(wl(),$conf['title'],'name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[ALT+H]"') ?> &gt; <?php tpl_actionlink('backlink')?> </b>
   </div>
 
   <div class="<?php echo $page_type ?> h6e-main-content">
@@ -55,9 +55,12 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
     <div style="float:right">
     <?php tpl_searchform() ?>
     </div>
+
     <div class="actions actions-page">
         <?php tpl_button('edit')?>
         <?php tpl_button('history')?>
+        <?php tpl_button('revert')?>
+        <?php tpl_button('backlink')?>
     </div>
 
     <?php if (!tpl_getConf('hide-entry-title')){?>
@@ -86,23 +89,14 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
         <?php tpl_pageinfo()?>
     </div>
 
-<!--
-    <div class="actions actions-page">
-        <?php tpl_button('edit')?>
-        <?php tpl_button('history')?>
-        <?php tpl_button('revert')?>
-        <?php tpl_button('backlink')?>
-    </div>
--->
-
-    <div class="h6e-simple-footer">
-
       <div class="actions actions-site">
           <div class="a">
               <?php tpl_button('recent')?>
               <?php tpl_button('index')?>
           </div>
       </div>
+
+    <div class="h6e-simple-footer">
 
       <p><?php echo tpl_getConf('footer-text') ?></p>
 
