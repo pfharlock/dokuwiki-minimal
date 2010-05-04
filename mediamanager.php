@@ -28,7 +28,7 @@ define('H6E_CSS', DOKU_URL . 'lib/tpl/minimal');
   </style>
 </head>
 
-<body>
+<body class="h6e-layout">
 <div id="media__manager" class="dokuwiki h6e-main-content">
 
     <div id="media__left">

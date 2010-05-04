@@ -175,6 +175,14 @@ button.toolbutton {
 	width:100px;
 }
 
+#user__manager tr.disabled {
+	background:none;
+}
+
+#user__manager input[type="image"] {
+	background:none;
+}
+
 /* Medias */
 
 div.dokuwiki div.img_big {
@@ -215,3 +223,27 @@ div.dokuwiki h5 {margin-left: 80px;}
 table {border: thin solid; border-collapse: collapse}
 table td {border: thin solid}
 table th {border: thin solid}
+
+/* Link */
+
+.h6e-main-content #link__wiz {
+	border-color:#4E5368;
+}
+
+.h6e-main-content #link__wiz_header {
+	background:none;
+}
+
+.h6e-main-content #link__wiz_result {
+	border-color:#BBBBBB;
+}
+
+/* Admin */
+
+.dokuwiki .h6e-main-content ul.admin_tasks li div.li {
+	font-weight:normal;
+}
+
+.dokuwiki .h6e-main-content ul.admin_tasks {
+	margin-left:0;
+}

@@ -40,35 +40,11 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
 
 </head>
 
-<body>
+<body class="h6e-layout">
 
 <div class="dokuwiki">
 
-  <?php html_msgarea()?>
-
-  <?php
-  if (tpl_getConf('topbar') == 'never') {
-      $top_bar = false;
-  } else if (tpl_getConf('topbar') == 'connected' && empty($_SERVER['REMOTE_USER'])) {
-      $top_bar = false;
-  } else {
-      $top_bar = true;
-  }
-  ?>
-
-  <?php if (class_exists('Ld_Ui') && method_exists('Ld_Ui', 'top_bar') && $top_bar) : ?>
-     <?php Ld_Ui::top_bar() ?>
-  <?php else : ?>
-      <div class="user-info" style="float:right">
-        <?php tpl_userinfo()?>
-        <?php tpl_actionlink('subscribe') ?>
-        <?php tpl_actionlink('subscribens') ?>
-
-        <?php tpl_actionlink('profile') ?>
-        <?php tpl_actionlink('admin') ?>
-        <?php tpl_actionlink('login'); ?>
-      </div>
-  <?php endif ?>
+  <?php include dirname(__FILE__) . '/top.php' ?>
 
   <div style="padding-bottom: .5em; padding-left: 30px;">
   <b><a href="/">The Singularity</a> &gt; <?php tpl_link(wl(),$conf['title'],'name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[ALT+H]"') ?> &gt; <?php tpl_actionlink('backlink')?> </b>
@@ -109,6 +85,15 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
     <div class="pageinfo">
         <?php tpl_pageinfo()?>
     </div>
+
+<!--
+    <div class="actions actions-page">
+        <?php tpl_button('edit')?>
+        <?php tpl_button('history')?>
+        <?php tpl_button('revert')?>
+        <?php tpl_button('backlink')?>
+    </div>
+-->
 
     <div class="h6e-simple-footer">
 
