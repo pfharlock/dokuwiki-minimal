@@ -33,33 +33,11 @@ define('H6E_CSS', DOKU_URL . 'lib/tpl/minimal');
 
 </head>
 
-<body>
+<body class="h6e-layout">
 
 <div class="dokuwiki">
 
-  <?php html_msgarea()?>
-
-  <?php
-  if (tpl_getConf('topbar') == 'never') {
-      $top_bar = false;
-  } else if (tpl_getConf('topbar') == 'connected' && empty($_SERVER['REMOTE_USER'])) {
-      $top_bar = false;
-  } else {
-      $top_bar = true;
-  }
-  ?>
-
-  <?php if (function_exists('ld_top_bar') && $top_bar) : ?>
-     <?php ld_top_bar() ?>
-  <?php else : ?>
-    <div class="user-info">
-        <?php tpl_userinfo()?>
-        <?php tpl_actionlink('subscription') ?>
-        <?php tpl_actionlink('profile') ?>
-        <?php tpl_actionlink('admin') ?>
-        <?php tpl_actionlink('login'); ?>
-    </div>
-  <?php endif ?>
+  <?php include dirname(__FILE__) . '/top.php' ?>
 
   <div class="content-page h6e-main-content">
 
