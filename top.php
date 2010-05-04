@@ -24,7 +24,7 @@ if (tpl_getConf('topbar') == 'never') {
     ?>
     <?php Ld_Ui::top_bar(array('loginUrl' => $loginUrl, 'logoutUrl' => $logoutUrl)); ?>
 <?php else : ?>
-  <div class="user-info">
+  <div class="user-info" style="float:right">
       <?php tpl_userinfo()?>
       <?php tpl_actionlink('subscription') ?>
       <?php tpl_actionlink('profile') ?>
